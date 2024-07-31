@@ -1,5 +1,5 @@
 const Post = require("../models/Post");
-
+//서비스의 액션들을 함수로 지정. 요청에 따라 데이터를 반환, 입력, 수정, 삭제 역할을 수행
 const resolvers = {
   posts: async () => await Post.find(),
   post: async ({ id }) => await Post.findById(id),
